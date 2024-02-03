@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Selectors</title>
+    <style>
+      
+      /* element selectors */
+      div {
+        background-color: red;
+      }
+      /* class Selectors */
+      .red {
+        background-color: blue;
+      }
+      /* id selecotrs */
+      #green {
+        background-color: blueviolet;
+      }
+      /* child selectors  */
+      div > p {
+        color: rgb(0, 0, 0);
+        background-color: cadetblue;
+      }
+       /* Descendent Selectors */
+       div p {
+              color: blue;     
+              background-color: rgb(252, 175, 81);  
+       }
+
+        /* Universal Selectors */
+       *{
+         margin: 0;
+         padding: 0;
+       }
+       
+       /* Pseudo Selector */
+       a:visited{
+           color: rgb(250, 30, 30);
+       }
+       a:link{
+            color: goldenrod;
+       }
+
+       a:active{
+                background-color: rgb(181, 255, 8);
+       }
+       a:hover{
+               
+               background-color: blueviolet;
+       }
+       p:first-child{
+         background-color: aqua;
+       }
+       /* So, the order of specificity is: stronger specificty higher chances of implementation
+        Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector */
+       
+    </style>
+  </head>
+  <body>
+    <main class="one">
+       <p>I am first</p>
+       <p>i am Second</p> 
+      </main>
+     <div class="selector"> I am Selectors</div>
+    <div>This is div section</div>
+
+    <div class="red">
+      this is 3rd div selecotrs
+      <article>
+        <p>i am div inside the class selectors</p>
+      </article>
+    </div>
+
+    <div id="green">this is second div selector</div>
+
+    <!-- child selecotrs -->
+    <div>
+      <article>
+        <p>i am a paragraph</p>
+      </article>
+    </div>
+     <a href="https://Google.com">Go To Google</a>
+     <a href="https://facebook.com">facebook</a>
+      
+  </body>
+</html>
